@@ -1,0 +1,27 @@
+function analyzeSentence(sentence) {
+    // Initialize counters
+    let lengthCounter = 0;
+    let wordCounter = 1; 
+    let vowelCounter = 0;
+
+    // Define vowels
+    const vowels = 'aeiou';
+
+    // Process each character in the sentence
+    for (let i = 0; i < sentence.length; i++) {
+        let char = sentence[i].toLowerCase();
+        lengthCounter++;
+        if (vowels.includes(char)) {
+            vowelCounter++;
+        }
+        if (char === ' ') {
+            wordCounter++;
+        }
+    }
+
+    //  results
+    console.log(`Length: ${lengthCounter}`);
+    console.log(`Number of words: ${wordCounter}`);
+    console.log(`Number of vowels: ${vowelCounter}`);
+}
+
